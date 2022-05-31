@@ -35,7 +35,7 @@ function timeTracker() {
 };
 timeTracker();
 
-$('.btn').on('click', function () {
+$('saveBtn').on('click', function () {
   var text = containerEl.find(".inserttext").val();
   var time = $(this).parent().attr("id");
 
@@ -44,6 +44,7 @@ $('.btn').on('click', function () {
 
 localStorage.setItem(time, text);
 console.log(time);
+
 
 var containerEl = JSON.parse(localStorage.getItem("time")) || [];
 // have to get better at utilizing local storage
