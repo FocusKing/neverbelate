@@ -18,9 +18,9 @@ WHEN I refresh the page
 THEN the saved events persist
 
 ## Resources
-[Git Hub Repo]()
+[Git Hub Repo](https://github.com/FocusKing/neverbelate)
 
-[LIVE SITE]()
+[LIVE SITE](https://focusking.github.io/neverbelate/)
 
 ## Table of Contents
 

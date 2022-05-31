@@ -9,7 +9,7 @@ setInterval(function(){
 
 }, 1000);
 
-console.log ('Hello') 
+//console.log ('Hello') 
 
 // this function tracks the hours we are in and declare it the past, present, or future group help!!
 function timeTracker() {
@@ -36,17 +36,20 @@ function timeTracker() {
 timeTracker();
 
 $('.btn').on('click', function () {
-  var value = containerEl.find(".inserttext").val();
+  var text = containerEl.find(".inserttext").val();
   var time = $(this).parent().attr("id");
 
   // Using the This keyword, target the id of the parrent and the value of the textbox using siblings
 })
 
-var container = JSON.parse(localStorage.getItem("container")) || [];
+localStorage.setItem(time, text);
+console.log(time);
+
+var containerEl = JSON.parse(localStorage.getItem("time")) || [];
+// have to get better at utilizing local storage
 
 
-
-localStorage.setItem("container", JSON.stringify(container));
+localStorage.setItem("containerEl", JSON.stringify(container));
 
 
 
