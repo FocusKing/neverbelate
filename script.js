@@ -1,33 +1,43 @@
-var container = $('#container');
+var containerEl = $('#container');
 var saveButton = $('#saveButton');
 var textInput = $('#text-input');
-var rowTime = $('#row-time');
-var rowArray = $('#row-array');
 var localStorage = localStorage.getItem('text');
 var currentTime = moment().format
+
+setInterval(function(){
+  $("#currentDay").text(moment().format("dddd,MMMM Do YYYY, h:mm:ss a"));
+
+}, 1000);
 
 console.log ('Hello') 
 
 // this function tracks the hours we are in and declare it the past, present, or future group help!!
-function colorCoordinator() {
-  var hour = moment().hours();
+function timeTracker() {
+  var currentTime = moment().hours();
   $('.time-block').each(function () {
 
-    var rHour = parseInt($(this).attr('id'));
+    var nextTime = parseInt($(this).attr('id'));
 
-    if (rHour > hour) {
-      $(this).addClass('future');
-    } else if (rHour === hour) {
-      $(this).addClass('present');
-    } else {
+    if (currentTime > nextTime) {
       $(this).addClass('past');
+      $(this).removeClass('present');
+      $(this).removeClass('future');
+    } else if (currentTime < nextTime) {
+      $(this).removeClass('past');
+      $(this).removeClass('present');
+      $(this).addClass('future');
+    } else {
+      $(this).removeClass('past');
+      $(this).addClass('present');
+      $(this).removeClass('future');
     }
   })
 };
+timeTracker();
 
-$('.btn').on('click', function (){
-  var value = ""
-  var time = ""
+$('.btn').on('click', function () {
+  var value = containerEl.find(".inserttext").val();
+  var time = $(this).parent().attr("id");
 
   // Using the This keyword, target the id of the parrent and the value of the textbox using siblings
 })
@@ -38,7 +48,7 @@ var container = JSON.parse(localStorage.getItem("container")) || [];
 
 localStorage.setItem("container", JSON.stringify(container));
 
-printGuestData(nameInput, commentInput);
+
 
 
 
@@ -48,4 +58,3 @@ container.forEach(function (item) {
   printGuestData(item.name, item.comment);
 });
 
-formEl.on('submit', handleFormSubmit);
