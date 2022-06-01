@@ -31,6 +31,6 @@ THEN the saved events persist
 - [Tests] Usage
 
 ## Visuals
-![Schedule image](./Images/scheulephoto.png)
+![Schedule image](./Images/neverbelateschedule.png)
 
 ## Test
