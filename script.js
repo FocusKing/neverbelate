@@ -7,16 +7,7 @@ setInterval(function () {
 
 var containerEl = $(".container");
 
-$('#8 .inserttext').val(localStorage.getItem('8'));
-$('#9 .inserttext').val(localStorage.getItem('9'));
-$('#10 .inserttext').val(localStorage.getItem('10'));
-$('#11 .inserttext').val(localStorage.getItem('11'));
-$('#12 .inserttext').val(localStorage.getItem('12'));
-$('#1 .inserttext').val(localStorage.getItem('1'));
-$('#2 .inserttext').val(localStorage.getItem('2'));
-$('#3 .inserttext').val(localStorage.getItem('3'));
-$('#4 .inserttext').val(localStorage.getItem('4'));
- 
+
 
 
 $('.saveBtn').on('click', function () {
@@ -26,6 +17,17 @@ $('.saveBtn').on('click', function () {
 
   // Using the This keyword, target the id of the parrent and the value of the textbox using siblings
 })
+
+
+$('8 .inserttext').val(localStorage.getItem('8'));
+$('9 .inserttext').val(localStorage.getItem('9'));
+$('10 .inserttext').val(localStorage.getItem('10'));
+$('11 .inserttext').val(localStorage.getItem('11'));
+$('12 .inserttext').val(localStorage.getItem('12'));
+$('1 .inserttext').val(localStorage.getItem('1'));
+$('2 .inserttext').val(localStorage.getItem('2'));
+$('3 .inserttext').val(localStorage.getItem('3'));
+$('4 .inserttext').val(localStorage.getItem('4'));
 
 function timeTracker() {
   var currentTime = moment().hours();
