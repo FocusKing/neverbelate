@@ -1,10 +1,10 @@
-var containerEl =$(".container")
+var containerEl = $(".container")
 var saveButton = $('#saveButton');
 var textInput = $('textarea');
 var localStorage = localStorage.getItem('text');
 var currentTime = moment().format
 
-setInterval(function(){
+setInterval(function () {
   $("#currentDay").text(moment().format("dddd,MMMM Do YYYY, h:mm:ss a"));
 
 }, 1000);
@@ -17,8 +17,8 @@ function timeTracker() {
   $('.time-block').each(function () {
 
     var nextTime = parseInt($(this).attr('id'));
-console.log("nextTime");
-console.log("currentTime");
+    //console.log("nextTime");
+    //console.log("currentTime");
     if (currentTime > nextTime) {
       $(this).addClass('past');
       $(this).removeClass('present');
@@ -36,16 +36,15 @@ console.log("currentTime");
 };
 timeTracker();
 
-$('saveBtn').on('click', function () {
+$('.saveBtn').on('click', function () {
   var text = containerEl.find(".inserttext").val();
-  var time = $(this).parent().attr("id");
-  localStorage.setItem("time",text);
-console.log("text",text);
+  var hour = $(this).parent().attr("id");
+  localStorage.setItem(hour, text);
+  console.log(hour);
   // Using the This keyword, target the id of the parrent and the value of the textbox using siblings
 })
 
 
-console.log(time);
 
 
 //var containerEl = JSON.parse(localStorage.getItem("time")) || [];
@@ -62,6 +61,5 @@ console.log(time);
 
 // storage.forEach(function (item) {
 //   console.log("HELLO")
- 
-// });
 
+// });
