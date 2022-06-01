@@ -1,6 +1,6 @@
 var containerEl = $('#container');
 var saveButton = $('#saveButton');
-var textInput = $('#text-input');
+var textInput = $('textarea');
 var localStorage = localStorage.getItem('text');
 var currentTime = moment().format
 
@@ -37,10 +37,10 @@ console.log("currentTime");
 timeTracker();
 
 $('saveBtn').on('click', function () {
-  var text = containerEl.find(".inserttext").val();
+  var text = textInput.find(".inserttext").val();
   var time = $(this).parent().attr("id");
   localStorage.setItem("time",text);
-
+console.log("text",text);
   // Using the This keyword, target the id of the parrent and the value of the textbox using siblings
 })
 
@@ -48,19 +48,20 @@ $('saveBtn').on('click', function () {
 console.log(time);
 
 
-var containerEl = JSON.parse(localStorage.getItem("time")) || [];
+//var containerEl = JSON.parse(localStorage.getItem("time")) || [];
 // have to get better at utilizing local storage
 
 
-localStorage.setItem("containerEl", JSON.stringify(container));
+// localStorage.setItem("containerEl", JSON.stringify(container));
 
 
 
 
 
-var container = JSON.parse(localStorage.getItem("container")) || [];
+// //var storage = JSON.parse(localStorage.getItem("container")) || [];
 
-container.forEach(function (item) {
+// storage.forEach(function (item) {
+//   console.log("HELLO")
  
-});
+// });
 
