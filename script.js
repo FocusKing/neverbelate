@@ -17,7 +17,8 @@ function timeTracker() {
   $('.time-block').each(function () {
 
     var nextTime = parseInt($(this).attr('id'));
-
+console.log("nextTime");
+console.log("currentTime");
     if (currentTime > nextTime) {
       $(this).addClass('past');
       $(this).removeClass('present');
@@ -38,11 +39,12 @@ timeTracker();
 $('saveBtn').on('click', function () {
   var text = containerEl.find(".inserttext").val();
   var time = $(this).parent().attr("id");
+  localStorage.setItem("time",text);
 
   // Using the This keyword, target the id of the parrent and the value of the textbox using siblings
 })
 
-localStorage.setItem(time, text);
+
 console.log(time);
 
 
@@ -59,6 +61,6 @@ localStorage.setItem("containerEl", JSON.stringify(container));
 var container = JSON.parse(localStorage.getItem("container")) || [];
 
 container.forEach(function (item) {
-  printGuestData(item.name, item.comment);
+ 
 });
 

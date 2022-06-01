@@ -6,7 +6,7 @@ body {
   }
   
   textarea{
-    background: transparent;
+    background: crimson;
     border: none;
     resize: none;
     color: #000000;
@@ -75,10 +75,4 @@ body {
     font-size: 20px;
     transition: all .9s ease-in-out;
   }
-  .btn-info {
-    border-left: 1px solid black;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #06AED5;
-    color: white;
-  }
+  
