@@ -1,4 +1,4 @@
-var containerEl = $('#container');
+var containerEl =$(".container")
 var saveButton = $('#saveButton');
 var textInput = $('textarea');
 var localStorage = localStorage.getItem('text');
@@ -37,7 +37,7 @@ console.log("currentTime");
 timeTracker();
 
 $('saveBtn').on('click', function () {
-  var text = textInput.find(".inserttext").val();
+  var text = containerEl.find(".inserttext").val();
   var time = $(this).parent().attr("id");
   localStorage.setItem("time",text);
 console.log("text",text);
