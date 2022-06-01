@@ -34,3 +34,5 @@ THEN the saved events persist
 ![Schedule image](./Images/neverbelateschedule.png)
 
 ## Test
+
+During this project I had to test the function of my save button by utilizing local storage to see if I would get back the correct response upon text entry and pressing the save button. Local storage keeps track of your data according to how you assign the keys and values.  I am still in the process of fine tuning this code to get better functionality, but I believe I arrived a good point. 
