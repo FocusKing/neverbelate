@@ -31,6 +31,6 @@ THEN the saved events persist
 - [Tests] Usage
 
 ## Visuals
-![Schedule image](./Images/neverbelateschedule.png)
+![Schedule image](./Images/neverbelateschedule.png$("#8 .inserttext").val(localStorage.getItem("8")))
 
 ## Test
